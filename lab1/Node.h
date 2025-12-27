@@ -1,17 +1,17 @@
-#include <iostream>
-
+#ifndef NODE_H
+#define NODE_H
 
 class Node{
-    private:
+    public:
     int data;
     Node* next;
     Node* prev;
-    public:
     Node (){}
     Node (int data){
         this->data = data;
         this->next = NULL;
         this->prev =NULL;
-
     }
-}
+};
+
+#endif

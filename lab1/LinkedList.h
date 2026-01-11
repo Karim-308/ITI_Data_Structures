@@ -211,11 +211,13 @@ void clear(){
 
   }
 
-  
+
 void friend bubbleSort(LinkedList& list);
 void friend selectionSort(LinkedList& list);
 void friend insertionSort(LinkedList& list);
 void friend binarySort(LinkedList& list);
+int friend linearSearch(LinkedList& list, int target);
+int friend binarySearch(LinkedList& list, int target);
 
 
 };

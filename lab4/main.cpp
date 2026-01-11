@@ -21,31 +21,38 @@ int main()
     t.add(48);
     t.add(49);
     
-    t.getNodeByData(50)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.getNodeByData(45)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.getNodeByData(65)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.getNodeByData(60)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.getNodeByData(21)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.getNodeByData(23)!=NULL? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
+    t.getNodeByData(50)!= NULL ? cout<<"found"<<endl :cout<<"Not found"<<endl;
+    t.getNodeByData(45)!= NULL ? cout<<"found"<<endl :cout<<"Not found"<<endl;
+    t.getNodeByData(21)!=NULL ? cout<<"found"<<endl :cout<<"Not found"<<endl;
+    t.getNodeByData(23)!=NULL ?  cout<<"found"<<endl :cout<<"Not found"<<endl;
     
-    t.checkDataInTree(50)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.checkDataInTree(45)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.checkDataInTree(65)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.checkDataInTree(60)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.checkDataInTree(21)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    t.checkDataInTree(23)!=false? cout<<"Found"<<endl :cout<<"Not Found"<<endl;
-    int parent = t.getParentMain(21);
-    parent == -1 ? cout<<"Root"<<endl: parent == -5 ? cout<<"<<Not Found>>"<<endl:cout<<"Parent = "<<parent<<endl;
-    parent = t.getParentMain(50);//root
-    parent == -1 ? cout<<"Root"<<endl: parent == -5 ? cout<<"<<Not Found>>"<<endl:cout<<"Parent = "<<parent<<endl;
-    parent = t.getParentMain(65);//70
-    parent == -1 ? cout<<"Root"<<endl: parent == -5 ? cout<<"<<Not Found>>"<<endl:cout<<"Parent = "<<parent<<endl;
-    parent = t.getParentMain(45);//40
-    parent == -1 ? cout<<"Root"<<endl: parent == -5 ? cout<<"<<Not Found>>"<<endl:cout<<"Parent = "<<parent<<endl;
+    int parent = t.getParentMain(50);
+    if (parent == -1) {
+        cout << "root" << endl;
+    } else if (parent == -5) {
+        cout << "not found" << endl;
+    } else {
+        cout << "parent is " << parent << endl;
+    }
 
-    cout<<"Max Right : "<<t.getMaxRightMain(40)<<endl;
+    parent = t.getParentMain(65);
+    if (parent == -1) {
+        cout << "root" << endl;
+    } else if (parent == -5) {
+        cout << "not found" << endl;
+    } else {
+        cout << "parent of 65 is " << parent << endl;
+    }
+
+    t.checkDataInTree(21)!=false? cout<<"found"<<endl :cout<<"not found"<<endl;
+    t.checkDataInTree(23)!=false? cout<<"found"<<endl :cout<<"not found"<<endl;
 
 
-    cout << "Hello world!" << endl;
+
+
+    cout<<t.getMaxRightMain(40)<<endl;
+    cout <<t.getMaxRightMain(30)<<endl;
+
+   
     return 0;
 }
